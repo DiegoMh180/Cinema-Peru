@@ -1,0 +1,791 @@
+/* ======== TEMA GLOBAL CINEMARK — ROJO + NEGRO ======== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: white;
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ---------- HEADER / NAV ---------- */
+header img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+nav {
+    background-color: #111;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ff2b2b;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s ease;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* ---------- TITULOS ---------- */
+h1, h2, h4 {
+    color: #ff2b2b;
+    margin: 20px 0;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h3, h4, nav a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ---------- CONTENEDORES GENERALES ---------- */
+main {
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+main div {
+    margin: 25px 0;
+}
+
+/* ===== MEJORA DE IMÁGENES GENERALES ===== */
+main img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 50, 50, 0.8);
+}
+
+
+/* ---------- PELÍCULAS (cartelera) ---------- */
+main div img {
+    margin-bottom: 15px;
+}
+
+main div p {
+    width: 80%;
+    margin: 10px auto;
+    text-align: justify;
+    font-size: 17px;
+}
+
+/* ---------- BOTONES ---------- */
+button {
+    background-color: #ff2b2b;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    margin: 15px auto;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #d40000;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background-color: #111;
+    padding: 30px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+footer h4 {
+    margin-top: 20px;
+}
+
+footer a {
+    color: #ff2b2b;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: white;
+}
+
+footer h5 {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (min-width: 750px) {
+    .cartelera-item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .cartelera-item img {
+        max-width: 250px;
+    }
+    .cartelera-item p {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+/* ===== PROMOCIONES CON HOVER REVEAL ===== */
+.promo-card {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    margin: 25px auto;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.promo-card img {
+    width: 100%;
+    display: block;
+}
+
+.promo-card:hover {
+    transform: scale(1.03);
+}
+
+.promo-info {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    opacity: 0;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+.promo-card:hover .promo-info {
+    opacity: 1;
+}
+
+.promo-info h4 {
+    color: #ff2b2b;
+    margin-bottom: 10px;
+}
+
+.promo-info p {
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+/* ===== ESTRENOS EN UNA FILA ===== */
+.estrenos-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;        /* todo en una sola fila */
+    gap: 25px;
+    margin-top: 20px;
+    overflow-x: auto;         /* si es muy pequeño el monitor, permite deslizar */
+    padding-bottom: 10px;
+}
+
+.estrenos-container div {
+    text-align: center;
+    width: 180px;             /* tamaño ideal estilo Cinemark */
+}
+
+.estrenos-container img {
+    width: 100%;
+    max-width: 180px;         /* más pequeño */
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.estrenos-container h4 {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+/* ===== PROMOCIONES EN UNA SOLA FILA ===== */
+.promos-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;          /* todo en una sola fila */
+    gap: 30px;
+    margin-top: 25px;
+    overflow-x: auto;           /* si la pantalla es pequeña, permite deslizar */
+    padding-bottom: 15px;
+}
+
+.promo-card {
+    min-width: 250px;           /* tamaño base */
+    max-width: 280px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    flex-shrink: 0;             /* evita que se achiquen demasiado */
+}
+
+.promo-card img {
+    width: 100%;
+    height: auto;
+}
+
+/* Mantener efecto hover reveal */
+.promo-card:hover {
+    transform: scale(1.05);
+}
+
+/* ===== TRAILER EXTRA GRANDE Y CENTRADO ===== */
+.trailer-container {
+    width: 100%;
+    max-width: 1000px;         /* tráiler mucho más grande */
+    margin: 30px auto;         /* centrado */
+    display: flex;
+    justify-content: center;
+}
+
+.trailer-container iframe {
+    width: 100%;
+    height: 560px;             /* altura más grande */
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+}
+
+/* ===== FOOTER PROFESIONAL CINEMARK ===== */
+
+footer {
+    background-color: #111;
+    padding: 40px 20px;
+    color: white;
+    margin-top: 50px;
+}
+
+/* Contenedor en columnas */
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: left;
+}
+
+/* Sección */
+.footer-section h4 {
+    color: #ff2b2b;
+    margin-bottom: 15px;
+    font-size: 20px;
+    border-left: 4px solid #ff2b2b;
+    padding-left: 8px;
+}
+
+.footer-section a {
+    color: #ccc;
+    display: block;
+    text-decoration: none;
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+.footer-section a:hover {
+    color: #ff2b2b;
+}
+
+/* Línea final */
+footer h5 {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Responsive mejorado */
+@media (max-width: 600px) {
+    .footer-container {
+        text-align: center;
+    }
+
+    .footer-section h4 {
+        border: none;
+        padding-left: 0;
+    }
+}
+
+/* ===== BANNER PROFESIONAL ===== */
+.banner {
+    width: 100%;
+    height: 220px;                 /* más delgado */
+    overflow: hidden;              /* recorta exceso */
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;             /* mantiene nitidez, no estira */
+    object-position: center;       /* centra la imagen */
+    display: block;
+    filter: brightness(95%);       /* se ve más cinematográfico */
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,0.7));
+}
+
+
+/* ===== GRID 4x4 PELÍCULAS ===== */
+.peliculas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    width: 90%;
+    margin: 40px auto;
+}
+
+@media (max-width: 900px) {
+    .peliculas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .peliculas-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== TARJETA DE PELÍCULA CON EFECTO PROMO ===== */
+
+.pelicula-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: #111;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+    transition: 0.3s ease;
+}
+
+.pelicula-card img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Efecto hover reveal (igual que promociones) */
+.pelicula-info {
+    position: absolute;
+    inset: 0;
+
+}
+
+/* ===== TARJETAS DE PELÍCULAS CON REVEAL EN HOVER ===== */
+
+.pelicula-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: #111;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.pelicula-card img {
+    width: 100%;
+    height: 380px;
+    object-fit: contain;         /* muestra todo, sin recortes */
+    background-color: #000;      /* para que se vea “cine” si sobra espacio */
+}
+
+
+/* Info oculta por defecto */
+.pelicula-info {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    color: white;
+    opacity: 0;                  /* <<< OCULTO INICIALMENTE */
+    padding: 20px;
+    text-align: center;
+    transition: opacity 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Al pasar el mouse aparece */
+.pelicula-card:hover .pelicula-info {
+    opacity: 1;
+}
+
+/* Título dentro del overlay */
+.pelicula-info h2 {
+    color: #ff2b2b;
+    margin-bottom: 10px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+}
+
+/* Descripción */
+.pelicula-info p {
+    font-size: 15px;
+    line-height: 1.4;
+    color: #ddd;
+}
+
+
+/* ===== PÁGINA SOCIO — DISEÑO PROFESIONAL ===== */
+
+/* Sección inicial */
+.socio-header {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.socio-header h1 {
+    color: #ff2b2b;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.socio-header p {
+    font-size: 18px;
+    width: 70%;
+    margin: auto;
+    color: #ddd;
+}
+
+.btn-socio {
+    background-color: #ff2b2b;
+    border: none;
+    padding: 14px 35px;
+    font-size: 20px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s ease;
+}
+
+.btn-socio:hover {
+    background-color: #d40000;
+}
+
+/* TARJETAS DE BENEFICIOS */
+.socio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    width: 90%;
+    margin: 40px auto;
+}
+
+.socio-card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.2);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.socio-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px rgba(255, 50, 50, 0.4);
+}
+
+.socio-card img {
+    width: 100%;
+    max-width: 260px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+/* Títulos dentro de tarjetas */
+.socio-card h2 {
+    color: #ff2b2b;
+    margin-bottom: 10px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Sección dudas centrada */
+.socio-dudas {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Contenedor centrado */
+.socio-dudas .dudas-buttons {
+    display: flex;
+    justify-content: center;     /* centra horizontalmente */
+    gap: 20px;
+    flex-wrap: wrap;             /* para que en celular se acomoden */
+    margin-top: 20px;
+}
+
+.btn-dudas {
+    background-color: transparent;
+    border: 2px solid #ff2b2b;
+    padding: 12px 25px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 18px;
+}
+
+.btn-dudas:hover {
+    background-color: #ff2b2b;
+}
+
+
+/* =======================================
+   SECCIÓN NOSOTROS — DISEÑO MEJORADO
+   ======================================= */
+
+/* Banner */
+.nosotros-banner {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    position: relative;
+}
+.nosotros-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(55%);
+}
+.nosotros-banner-texto h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ff2b2b;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    text-shadow: 0 0 12px rgba(0,0,0,0.8);
+}
+
+/* Sección general */
+.nosotros-section {
+    padding: 60px 10%;
+}
+
+/* GRID con imagen y texto */
+.nosotros-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.nosotros-texto h2 {
+    color: #ff2b2b;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+.nosotros-texto p {
+    color: #d6d6d6;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.nosotros-img img {
+    width: 100%;
+    border-radius: 12px;
+    border: 3px solid #ff2b2b;
+    box-shadow: 0 0 18px rgba(255, 0, 0, 0.25);
+}
+
+/* Misión y visión */
+.mision-vision {
+    padding: 50px 12%;
+    text-align: center;
+}
+
+.mision-vision h2 {
+    color: #ff2b2b;
+    margin-bottom: 25px;
+}
+
+.mv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.mv-card {
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid #ff2b2b;
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.25);
+    transition: 0.3s ease;
+}
+
+.mv-card:hover {
+    transform: translateY(-8px);
+}
+
+.mv-card h3 {
+    color: #ff2b2b;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.mv-card p {
+    color: #dcdcdc;
+    line-height: 1.5;
+}
+
+/* Por qué elegirnos */
+.elegirnos {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.elegirnos h2 {
+    color: #ff2b2b;
+    margin-bottom: 25px;
+}
+
+.elegirnos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.e-card {
+    background: #141414;
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid #ff2b2b;
+}
+
+.timeline {
+    padding: 70px 10%;
+    background-color: #0f0f0f; /* fondo más claro que el negro puro */
+    border-top: 3px solid #ff2b2b;
+    border-bottom: 3px solid #ff2b2b;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 40px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(#ff2b2b, #8b0000);
+    border-radius: 8px;
+}
+
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #ff2b2b;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(255,0,0,0.6);
+}
+
+.year {
+    font-family: 'Bebas Neue';
+    color: #ff2b2b;
+    font-size: 34px;
+    margin-bottom: 5px;
+}
+
+.timeline-item p {
+    color: #d6d6d6;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.cta-final {
+    text-align: center;
+    padding: 70px 20px;
+    background-color: #111; /* fondo para separar la sección */
+    margin-top: 60px;
+    border-top: 3px solid #ff2b2b;
+}
+
+.cta-btn {
+    padding: 18px 45px;
+    background-color: #ff2b2b;
+    color: white;
+    text-decoration: none;
+    font-size: 26px;
+    font-family: 'Bebas Neue';
+    border-radius: 12px;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    box-shadow: 0 0 18px rgba(255, 0, 0, 0.4);
+}
+
+.cta-btn:hover {
+    background-color: #d40000;
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+}
+
