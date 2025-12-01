@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Socio</title>
+    <link rel="stylesheet" href="../css/global.css">
 </head>
 <body>
     <header>
-        <img src="../imagenes/BANNERSOCIO.png" alt="BannerDeInicio" width="100%" height="370px">
+        <div class="banner">
+            <img src="../imagenes/BANNERSOCIO.png" alt="Banner">
+        </div>
+
         <nav>
             <ul>
               <li><a href="../index.html">Inicio</a></li>
@@ -19,41 +23,75 @@
         <hr>
     </header>
     <main>
+
+    <!-- Sección inicial -->
+    <div class="socio-header">
         <h1>DESCUBRE SOCIO+</h1>
-        <p>Por ser Socio Cinema Peru disfruta de promociones exclusivas en restaurantes, viajes, compras y mucho más</p>
-        <button>Explorar Socio+</button>
+        <p>Por ser Socio Cinema Perú disfruta de promociones exclusivas en restaurantes, viajes, compras, entretenimiento ¡y mucho más!</p>
+        <br><a href="./socio-form.html" class="btn-socio">Unete a Socio+</a>
 
-        <h2>Visitas</h2>
-        <p>Acumula visitas para pasar a la siguiente categoria y acceder amis beneficios.</p>
-        <img src="../imagenes/Socio_Visitas.png" alt="">
+    </div>
 
-        <h2>Puntos</h2>
-        <p>Acumukla puntos para canjear entradas y combos a precio de descuento</p>
-        <img src="../imagenes/Socio_Puntos.png" alt="">
+    <!-- Tarjetas estilo Cinemark -->
+    <div class="socio-grid">
 
-        <h2>Mas visitas, mas beneficios</h1>
+        <!-- VISITAS -->
+        <div class="socio-card">
+            <img src="../imagenes/Socio_Visitas.png" alt="">
+            <h2>Visitas</h2>
+            <p>Acumula visitas para subir de categoría y desbloquear beneficios especiales.</p>
+        </div>
 
+        <!-- PUNTOS -->
+        <div class="socio-card">
+            <img src="../imagenes/Socio_Puntos.png" alt="">
+            <h2>Puntos</h2>
+            <p>Gana puntos con cada compra y canjéalos por entradas, combos y más.</p>
+        </div>
+
+        <!-- BENEFICIOS -->
+        <div class="socio-card">
+            <img src="../imagenes/Socio_Visitas.png" alt="">
+            <h2>Más visitas, más beneficios</h2>
+            <p>Mientras más participes, mejores recompensas podrás obtener dentro del programa.</p>
+        </div>
+
+    </div>
+
+    <!-- Sección dudas -->
+    <div class="socio-dudas">
         <h2>¿Dudas?</h2>
+        <button class="btn-dudas">Condiciones del programa</button>
+        <button class="btn-dudas">Preguntas Frecuentes</button>
+    </div>
 
-        <button>Condiciones del programa</button>
-        <button>Preguntas Frecuentes</button>
+</main>
 
-    </main>
     <footer>
-        <h4>Cines</h4>
-        <a href="">Ubicaciones</a><br>
-        <a href="">Nuestros Formatos</a>
+    <div class="footer-container">
 
-        <h4>Otros Servicios</h4>
-        <a href="">Eventos y Servicios Corporativos</a><br>
-        <a href="">Publicidad</a>
+        <div class="footer-section">
+            <h4>Cines</h4>
+            <a href="">Ubicaciones</a>
+            <a href="">Nuestros Formatos</a>
+            <a href="">Próximas Aperturas</a>
+        </div>
 
-        <h4>Contacto</h4>
-        <a href="">Escribenos</a><br>
-        <a href="">Trabaja con nosotros</a>
+        <div class="footer-section">
+            <h4>Otros Servicios</h4>
+            <a href="">Eventos y Servicios Corporativos</a>
+            <a href="">Publicidad</a>
+            <a href="">Alquiler de Salas</a>
+        </div>
 
-        <h5>Copyright © 2025 Cinema Peru</h5>
-    </footer>
-    
+        <div class="footer-section">
+            <h4>Contacto</h4>
+            <a href="">Escríbenos</a>
+            <a href="">Trabaja con nosotros</a>
+            <a href="">Libro de Reclamaciones</a>
+        </div>
+
+    </div>
+
 </body>
 </html>

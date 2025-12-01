@@ -4,121 +4,132 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Peliculas</title>
+    <link rel="stylesheet" href="../css/global.css" />
   </head>
   <body>
     <header>
-      <img
-        src="../imagenes/BANNERPELICULAS.png"
-        alt="BannerDeInicio"
-        width="100%"
-        height="370px"
-      />
-       <nav>
-            <ul>
-              <li><a href="../index.html">Inicio</a></li>
-              <li><a href="./peliculas.html">Peliculas</a></li>
-              <li><a href="./socio.html">Socio</a></li>
-              <li><a href="./nosotros.html">Nosotros</a></li>
-            </ul>
-        </nav>
+      <div class="banner">
+        <img src="../imagenes/BANNERPELICULAS.png" alt="Banner" />
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="./peliculas.html">Peliculas</a></li>
+          <li><a href="./socio.html">Socio</a></li>
+          <li><a href="./nosotros.html">Nosotros</a></li>
+        </ul>
+      </nav>
       <hr />
     </header>
     <main>
-      <h1>CARTELERA</h1>
-      <div>
-        <img src="../imagenes/LosIndomables.png" alt="" />
-        <h2>LOS INDOMABLES</h2>
-        <p>
-          En 1781, las huestes revolucionarias Amaru Kataristas ocupan el
-          altiplano del sur de Perú. Sapa Inca, el último descendiente de los
-          incas aymaras y su esposa Gregoria, deciden continuar con la
-          insurrección indígena contra los opresores españoles. Sin embargo, en
-          una época tumultuosa, la obsesión por la causa libertaria, el amor en
-          tiempos de caos y la traición entre la hermandad, desencadenarán una
-          serie de tragedias.
-        </p>
-      </div><hr>
-      <div>
-        <img src="../imagenes/CronicasDeExorcismo.png" alt="" />
-        <h2>CRONICAS DE EXORCISMO: EL COMIENZO</h2>
-        <p>
-          El padre Park es un médico convertido en sacerdote que fue excomulgado
-          por realizar exorcismos para una iglesia que negaba la existencia de
-          males sobrenaturales. Cuando su viejo amigo, un monje de un templo
-          secreto y lleno de magia, lo llama para proteger a un niño ingenuo,
-          pero poderoso, de su malvado maestro, el padre Park deberá enfrentarse
-          a su pasado.
-        </p>
-      </div><hr>
-      <div>
-        <img src="../imagenes/CorazonDeLobo.png" alt="" />
-        <h2>EL CORAZON DE LOBO</h2>
-        <p>
-          Aquiles, un niño ashaninka de nueve años, es secuestrado de su aldea
-          por Sendero Luminoso y, forzado a convivir y crecer dentro del
-          movimiento terrorista, sobrevive impulsado por su obsesión de fugar y
-          encontrar a su padre.
-        </p>
-      </div><hr>
-      <div>
-        <img src="../imagenes/InfiernoEnLaTorrepng.png" alt="" />
-        <h2>INFIERNO EN LA TORRE</h2>
-        <p>
-          Incluso en los entornos más duros, los bomberos deben centrarse en
-          extinguir incendios y rescatar a todos los que se encuentren allí. A
-          las 3:47 de la madrugada del 4 de marzo de 2001, el centro de llamadas
-          de emergencia 119 recibe una llamada telefónica sobre un incendio que
-          se ha desatado en el barrio de Hongje-dong. Los bomberos, incluido
-          Cheol-Woong (Joo Won), se apresuran a llegar a la escena.
-        </p>
-      </div><hr>
-      <div>
-        <img src="../imagenes/EscapeExplosivo.png" alt="" />
-        <h2>ESCAPE EXPLOSIVO</h2>
-        <p>
-          Un agente de la DEA y una conductora audaz se enamoran, luego de 15
-          añosel destino de ambos se ve envuelto en una explosión durante un fin
-          de semanaen Taipei, que involucra al peor narcotraficante del país,
-          ambos se daráncuenta que lo único más difícil que atrapar al criminal
-          es volver a enamorarse.
-        </p>
-      </div><hr>
-      <div>
-        <img src="../imagenes/CazadoresDelFinDelMundo.png" alt="" />
-        <h2>CAZADORES DEL FIN DEL MUNDO</h2>
-        <p>
-          Un grupo de cazadores de tesoros postapocalípticos busca reliquias
-          antiguas en una Tierra que ha quedado casi medio destruida por una
-          enorme erupción solar.
-        </p>
-      </div><hr>
-      <div>
-        <img src="../imagenes/Avatar.png" alt="" />
-        <h2>AVATAR: EL CAMINO DEL AGUA [2022]</h2>
-        <p>
-          Ambientada más de una década después de los sucesos que tuvieron lugar
-          en la primera película, AVATAR: EL CAMINO DEL AGUA narra la historia
-          de la familia Sully (Jake, Neytiri y sus hijos), el peligro que los
-          persigue, los esfuerzos que hacen para mantenerse a salvo, las
-          batallas que libran para seguir con vida, y las tragedias que
-          sobrellevan.
-        </p>
-      </div><hr>
-    </main>
+
+    <h1>CARTELERA</h1>
+
+    <div class="peliculas-grid">
+
+        <!-- 1 -->
+        <div class="pelicula-card">
+            <img src="../imagenes/LosIndomables.png" alt="">
+            <div class="pelicula-info">
+                <h2>LOS INDOMABLES</h2>
+                <p>Rebelión indígena liderada por Sapa Inca en 1781 contra el dominio español.</p>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="pelicula-card">
+            <img src="../imagenes/CronicasDeExorcismo.png" alt="">
+            <div class="pelicula-info">
+                <h2>CRÓNICAS DE EXORCISMO</h2>
+                <p>Un sacerdote enfrenta fuerzas oscuras para proteger a un niño con poderes ocultos.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="pelicula-card">
+            <img src="../imagenes/CorazonDeLobo.png" alt="">
+            <div class="pelicula-info">
+                <h2>EL CORAZÓN DE LOBO</h2>
+                <p>Un niño ashaninka intenta escapar del terrorismo para reencontrarse con su padre.</p>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="pelicula-card">
+            <img src="../imagenes/InfiernoEnLaTorrepng.png" alt="">
+            <div class="pelicula-info">
+                <h2>INFIERNO EN LA TORRE</h2>
+                <p>Bomberos luchan contra un incendio masivo que amenaza una ciudad entera.</p>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="pelicula-card">
+            <img src="../imagenes/EscapeExplosivo.png" alt="">
+            <div class="pelicula-info">
+                <h2>ESCAPE EXPLOSIVO</h2>
+                <p>Una pareja enfrenta a un cartel mientras revive un amor peligroso.</p>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="pelicula-card">
+            <img src="../imagenes/CazadoresDelFinDelMundo.png" alt="">
+            <div class="pelicula-info">
+                <h2>CAZADORES DEL FIN DEL MUNDO</h2>
+                <p>Exploradores buscan reliquias en una Tierra devastada por una erupción solar.</p>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="pelicula-card">
+            <img src="../imagenes/Avatar.png" alt="">
+            <div class="pelicula-info">
+                <h2>AVATAR 2</h2>
+                <p>Jake y Neytiri luchan por proteger a su familia en los océanos de Pandora.</p>
+            </div>
+        </div>
+
+        <!-- 8 (PELÍCULA NUEVA) -->
+        <div class="pelicula-card">
+            <img src="../imagenes/DollHouse.png" alt="">
+            <div class="pelicula-info">
+                <h2>DOLLHOUSE</h2>
+                <p>Una muñeca maldita desata terror en una familia atrapada en su propia casa.</p>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+
     <footer>
-      <h4>Cines</h4>
-      <a href="">Ubicaciones</a><br />
-      <a href="">Nuestros Formatos</a>
+    <div class="footer-container">
 
-      <h4>Otros Servicios</h4>
-      <a href="">Eventos y Servicios Corporativos</a><br />
-      <a href="">Publicidad</a>
+        <div class="footer-section">
+            <h4>Cines</h4>
+            <a href="">Ubicaciones</a>
+            <a href="">Nuestros Formatos</a>
+            <a href="">Próximas Aperturas</a>
+        </div>
 
-      <h4>Contacto</h4>
-      <a href="">Escribenos</a><br />
-      <a href="">Trabaja con nosotros</a>
+        <div class="footer-section">
+            <h4>Otros Servicios</h4>
+            <a href="">Eventos y Servicios Corporativos</a>
+            <a href="">Publicidad</a>
+            <a href="">Alquiler de Salas</a>
+        </div>
 
-      <h5>Copyright © 2025 Cinema Peru</h5>
-    </footer>
+        <div class="footer-section">
+            <h4>Contacto</h4>
+            <a href="">Escríbenos</a>
+            <a href="">Trabaja con nosotros</a>
+            <a href="">Libro de Reclamaciones</a>
+        </div>
+
+    </div>
+
   </body>
 </html>
