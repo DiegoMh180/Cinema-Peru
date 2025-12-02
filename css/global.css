@@ -451,7 +451,7 @@ footer h5 {
     object-fit: contain;         
     background-color: #000;      
 
-
+}
 
 .pelicula-card:hover .pelicula-info {
     opacity: 1;
