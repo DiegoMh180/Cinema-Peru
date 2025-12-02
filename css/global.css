@@ -1,4 +1,4 @@
-/* ======== TEMA GLOBAL CINEMARK — ROJO + NEGRO ======== */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-/* ---------- HEADER / NAV ---------- */
+
 header img {
     width: 100%;
     height: auto;
@@ -75,7 +75,7 @@ main div {
     margin: 25px 0;
 }
 
-/* ===== MEJORA DE IMÁGENES GENERALES ===== */
+
 main img {
     width: 100%;
     max-width: 400px;
@@ -152,7 +152,7 @@ footer h5 {
     color: #ccc;
 }
 
-/* ---------- RESPONSIVE ---------- */
+
 @media (min-width: 750px) {
     .cartelera-item {
         display: flex;
@@ -168,7 +168,7 @@ footer h5 {
     }
 }
 
-/* ===== PROMOCIONES CON HOVER REVEAL ===== */
+
 .promo-card {
     position: relative;
     width: 100%;
@@ -217,26 +217,26 @@ footer h5 {
     line-height: 1.4;
 }
 
-/* ===== ESTRENOS EN UNA FILA ===== */
+
 .estrenos-container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    flex-wrap: nowrap;        /* todo en una sola fila */
+    flex-wrap: nowrap;        
     gap: 25px;
     margin-top: 20px;
-    overflow-x: auto;         /* si es muy pequeño el monitor, permite deslizar */
+    overflow-x: auto;         
     padding-bottom: 10px;
 }
 
 .estrenos-container div {
     text-align: center;
-    width: 180px;             /* tamaño ideal estilo Cinemark */
+    width: 180px;             
 }
 
 .estrenos-container img {
     width: 100%;
-    max-width: 180px;         /* más pequeño */
+    max-width: 180px;         
     border-radius: 10px;
     object-fit: cover;
 }
@@ -246,27 +246,26 @@ footer h5 {
     font-size: 15px;
 }
 
-/* ===== PROMOCIONES EN UNA SOLA FILA ===== */
 .promos-container {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    flex-wrap: nowrap;          /* todo en una sola fila */
+    flex-wrap: nowrap;          
     gap: 30px;
     margin-top: 25px;
-    overflow-x: auto;           /* si la pantalla es pequeña, permite deslizar */
+    overflow-x: auto;           
     padding-bottom: 15px;
 }
 
 .promo-card {
-    min-width: 250px;           /* tamaño base */
+    min-width: 250px;          
     max-width: 280px;
     position: relative;
     overflow: hidden;
     border-radius: 12px;
     cursor: pointer;
     transition: 0.3s ease;
-    flex-shrink: 0;             /* evita que se achiquen demasiado */
+    flex-shrink: 0;            
 }
 
 .promo-card img {
@@ -274,29 +273,28 @@ footer h5 {
     height: auto;
 }
 
-/* Mantener efecto hover reveal */
+
 .promo-card:hover {
     transform: scale(1.05);
 }
 
-/* ===== TRAILER EXTRA GRANDE Y CENTRADO ===== */
+
 .trailer-container {
     width: 100%;
-    max-width: 1000px;         /* tráiler mucho más grande */
-    margin: 30px auto;         /* centrado */
+    max-width: 1000px;         
+    margin: 30px auto;        
     display: flex;
     justify-content: center;
 }
 
 .trailer-container iframe {
     width: 100%;
-    height: 560px;             /* altura más grande */
+    height: 560px;             
     border-radius: 12px;
     border: none;
     box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
 }
 
-/* ===== FOOTER PROFESIONAL CINEMARK ===== */
 
 footer {
     background-color: #111;
@@ -305,7 +303,7 @@ footer {
     margin-top: 50px;
 }
 
-/* Contenedor en columnas */
+
 .footer-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -315,7 +313,7 @@ footer {
     text-align: left;
 }
 
-/* Sección */
+
 .footer-section h4 {
     color: #ff2b2b;
     margin-bottom: 15px;
@@ -336,7 +334,7 @@ footer {
     color: #ff2b2b;
 }
 
-/* Línea final */
+
 footer h5 {
     margin-top: 40px;
     text-align: center;
@@ -344,7 +342,7 @@ footer h5 {
     color: #aaa;
 }
 
-/* Responsive mejorado */
+
 @media (max-width: 600px) {
     .footer-container {
         text-align: center;
@@ -356,21 +354,20 @@ footer h5 {
     }
 }
 
-/* ===== BANNER PROFESIONAL ===== */
 .banner {
     width: 100%;
-    height: 220px;                 /* más delgado */
-    overflow: hidden;              /* recorta exceso */
+    height: 220px;                 
+    overflow: hidden;              
     position: relative;
 }
 
 .banner img {
     width: 100%;
     height: 100%;
-    object-fit: cover;             /* mantiene nitidez, no estira */
-    object-position: center;       /* centra la imagen */
+    object-fit: cover;             
+    object-position: center;       
     display: block;
-    filter: brightness(95%);       /* se ve más cinematográfico */
+    filter: brightness(95%);       
 }
 
 .banner::after {
@@ -381,7 +378,6 @@ footer h5 {
 }
 
 
-/* ===== GRID 4x4 PELÍCULAS ===== */
 .peliculas-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -402,7 +398,7 @@ footer h5 {
     }
 }
 
-/* ===== TARJETA DE PELÍCULA CON EFECTO PROMO ===== */
+/* ===== TARJETA DE PELÍCULA===== */
 
 .pelicula-card {
     position: relative;
@@ -421,14 +417,23 @@ footer h5 {
     display: block;
 }
 
-/* Efecto hover reveal (igual que promociones) */
 .pelicula-info {
     position: absolute;
     inset: 0;
+     position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    color: white;
+    opacity: 0;                  
+    padding: 20px;
+    text-align: center;
+    transition: opacity 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
 }
 
-/* ===== TARJETAS DE PELÍCULAS CON REVEAL EN HOVER ===== */
 
 .pelicula-card {
     position: relative;
@@ -443,32 +448,16 @@ footer h5 {
 .pelicula-card img {
     width: 100%;
     height: 380px;
-    object-fit: contain;         /* muestra todo, sin recortes */
-    background-color: #000;      /* para que se vea “cine” si sobra espacio */
-}
+    object-fit: contain;         
+    background-color: #000;      
 
 
-/* Info oculta por defecto */
-.pelicula-info {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.88);
-    color: white;
-    opacity: 0;                  /* <<< OCULTO INICIALMENTE */
-    padding: 20px;
-    text-align: center;
-    transition: opacity 0.35s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
-/* Al pasar el mouse aparece */
 .pelicula-card:hover .pelicula-info {
     opacity: 1;
 }
 
-/* Título dentro del overlay */
+
 .pelicula-info h2 {
     color: #ff2b2b;
     margin-bottom: 10px;
@@ -476,7 +465,7 @@ footer h5 {
     font-size: 26px;
 }
 
-/* Descripción */
+
 .pelicula-info p {
     font-size: 15px;
     line-height: 1.4;
@@ -484,7 +473,7 @@ footer h5 {
 }
 
 
-/* ===== PÁGINA SOCIO — DISEÑO PROFESIONAL ===== */
+/* ===== PÁGINA SOCIO ===== */
 
 /* Sección inicial */
 .socio-header {
@@ -552,25 +541,25 @@ footer h5 {
     border-radius: 10px;
 }
 
-/* Títulos dentro de tarjetas */
+
 .socio-card h2 {
     color: #ff2b2b;
     margin-bottom: 10px;
     font-family: 'Bebas Neue', sans-serif;
 }
 
-/* Sección dudas centrada */
+
 .socio-dudas {
     text-align: center;
     margin-top: 50px;
 }
 
-/* Contenedor centrado */
+
 .socio-dudas .dudas-buttons {
     display: flex;
-    justify-content: center;     /* centra horizontalmente */
+    justify-content: center;     
     gap: 20px;
-    flex-wrap: wrap;             /* para que en celular se acomoden */
+    flex-wrap: wrap;             
     margin-top: 20px;
 }
 
@@ -590,10 +579,7 @@ footer h5 {
 }
 
 
-/* =======================================
-   SECCIÓN NOSOTROS — DISEÑO MEJORADO
-   ======================================= */
-
+/*seccion nosotros*/
 /* Banner */
 .nosotros-banner {
     width: 100%;
@@ -618,12 +604,12 @@ footer h5 {
     text-shadow: 0 0 12px rgba(0,0,0,0.8);
 }
 
-/* Sección general */
+
 .nosotros-section {
     padding: 60px 10%;
 }
 
-/* GRID con imagen y texto */
+
 .nosotros-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -715,7 +701,7 @@ footer h5 {
 
 .timeline {
     padding: 70px 10%;
-    background-color: #0f0f0f; /* fondo más claro que el negro puro */
+    background-color: #0f0f0f; 
     border-top: 3px solid #ff2b2b;
     border-bottom: 3px solid #ff2b2b;
 }
@@ -765,7 +751,7 @@ footer h5 {
 .cta-final {
     text-align: center;
     padding: 70px 20px;
-    background-color: #111; /* fondo para separar la sección */
+    background-color: #111; 
     margin-top: 60px;
     border-top: 3px solid #ff2b2b;
 }
